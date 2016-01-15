@@ -24,7 +24,7 @@ shinyServer(function(input, output) {
   output$text4<-renderPrint({
     x<-input$select
     y<-input$select2
-    paste("Lift",round(round(a_matrix[x,y], digits=4)/(round(a_matrix[x,x], digits=4)*round(a_matrix[y,y], digits=4)),digits=4))
+    paste("Lift",round(round(a_matrix[x,y]/a_matrix[x,x], digits=4)/round(a_matrix[y,y], digits=4),digits=4))
   })
   
   output$tablanamecat1<-renderText({
@@ -212,7 +212,7 @@ shinyServer(function(input, output) {
   output$liftenero<-renderPrint({
     x<-input$select
     y<-input$select2
-    paste("Lift",round(round(a_matrix_ene[x,y], digits=4)/(round(a_matrix_ene[x,x], digits=4)*round(a_matrix_ene[y,y], digits=4)), digits=4))
+    paste("Lift",round(round(a_matrix_ene[x,y]/a_matrix_ene[x,x], digits=4)/round(a_matrix_ene[y,y], digits=4), digits=4))
   })
   
   output$tablanamecat1enero<-renderText({
@@ -396,10 +396,10 @@ shinyServer(function(input, output) {
     paste("Confidence",round(a_matrix_feb[x,y]/a_matrix_feb[x,x], digits=4))
   })
   
-  output$liftfebrero<-renderPrint({
+   output$liftfebrero<-renderPrint({
     x<-input$select
     y<-input$select2
-    paste("Lift",round(round(a_matrix_feb[x,y], digits=4)/(round(a_matrix_feb[x,x], digits=4)*round(a_matrix_feb[y,y], digits=4)), digits=4))
+    paste("Lift",round(round(a_matrix_feb[x,y]/a_matrix_feb[x,x], digits=4)/round(a_matrix_feb[y,y], digits=4), digits=4))
   })
   
   output$tablanamecat1febrero<-renderText({
@@ -582,10 +582,10 @@ shinyServer(function(input, output) {
     paste("Confidence",round(a_matrix_mar[x,y]/a_matrix_mar[x,x], digits=4))
   })
   
-  output$liftmarzo<-renderPrint({
+   output$liftmarzo<-renderPrint({
     x<-input$select
     y<-input$select2
-    paste("Lift", round(round(a_matrix_mar[x,y], digits=4)/(round(a_matrix_mar[x,x], digits=4)*round(a_matrix_mar[y,y], digits=4)), digits=4))
+    paste("Lift", round(round(a_matrix_mar[x,y]/a_matrix_mar[x,x], digits=4)/round(a_matrix_mar[y,y], digits=4), digits=4))
   })
   
   output$tablanamecat1marzo<-renderText({
@@ -777,7 +777,7 @@ shinyServer(function(input, output) {
   output$liftabril<-renderPrint({
     x<-input$select
     y<-input$select2
-    paste("Lift",round(round(a_matrix_abr[x,y], digits=4)/(round(a_matrix_abr[x,x], digits=4)*round(a_matrix_abr[y,y], digits=4)),digits=4))
+    paste("Lift",round(round(a_matrix_abr[x,y]/a_matrix_abr[x,x], digits=4)/round(a_matrix_abr[y,y], digits=4),digits=4))
   })
   
   output$tablanamecat1abril<-renderText({
@@ -959,7 +959,7 @@ shinyServer(function(input, output) {
   output$liftmayo<-renderPrint({
     x<-input$select
     y<-input$select2
-    paste("Lift",round(round(a_matrix_Mayo[x,y], digits=4)/(round(a_matrix_Mayo[x,x], digits=4)*round(a_matrix_Mayo[y,y], digits=4)), digits=4))
+    paste("Lift",round(round(a_matrix_Mayo[x,y]/a_matrix_Mayo[x,x], digits=4)/round(a_matrix_Mayo[y,y], digits=4), digits=4))
   })
   
   output$tablanamecat1mayo<-renderText({
@@ -1145,7 +1145,7 @@ shinyServer(function(input, output) {
   output$liftjunio<-renderPrint({
     x<-input$select
     y<-input$select2
-    paste("Lift",round(round(a_matrix_Junio[x,y], digits=4)/(round(a_matrix_Junio[x,x], digits=4)*round(a_matrix_Junio[y,y], digits=4)), digits=4))
+    paste("Lift",round(round(a_matrix_Junio[x,y]/a_matrix_Junio[x,x], digits=4)/round(a_matrix_Junio[y,y], digits=4), digits=4))
   })
   
   output$tablanamecat1junio<-renderText({
